@@ -1,19 +1,14 @@
-	<a id="direct">No link here!</a><br>
-		If not auto jump, click the link to jump.<br>
-		如果长时间未跳转，请点击上方链接继续安装。<br>
-		<label id='test1'></label>
-		<script>
-    function getQueryString(name) {
-var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
-var r = window.location.search.substr(1).match(reg);
-if (r != null) {
-return unescape(r[2]);
-}
-return null;
-}
-// 这样调用：
-alert(GetQueryString("code"));
-alert(GetQueryString("state"));
-alert(GetQueryString("参数名3"));
-		</script>
-	</body>
+<script>
+  function getUrlParam(name) {
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+  var r = window.location.search.substr(1).match(reg); //匹配目标参数
+  if (r != null)
+  {return decodeURIComponent(r[2]); }
+  return null; //返回参数值
+  }
+   alert("fff");
+    alert(getUrlParam("code"));
+	var code= getUrlParam("code");
+	var got=getUrlParam("state");
+	window.location.href=got."?code=".code;
+	<script>
