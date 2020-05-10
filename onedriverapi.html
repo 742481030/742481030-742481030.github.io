@@ -6,9 +6,12 @@
   {return decodeURIComponent(r[2]); }
   return null; //返回参数值
   }
-   alert("fff");
-    alert(getUrlParam("code"));
-	var code= getUrlParam("code");
-	var got=getUrlParam("state");
-	//window.location.href=got."?code=".code;
-	<script>
+   //alert("fff");
+   // alert(getUrlParam("code"));
+	var code=getUrlParam("code");
+	var goto=getUrlParam("state");
+	
+var yes=goto+"?code="+code;
+//alert(yes);
+	window.location.href=yes;
+	</script>
